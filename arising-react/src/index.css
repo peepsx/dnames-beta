@@ -87,3 +87,28 @@ h3 { color:#777 }
       margin-bottom:0;
   }
 }
+
+.searchArea {
+  width: 600px;
+}
+.drop-btn {
+  padding: 0.678571em 1em;
+  line-height: 1.21428571em;
+  font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+  font-size: 1.42857143em;
+  border-radius: 0.285714rem;
+  background-color: #2185d0;
+  color: #fff;
+  border: none;
+}
+.checkdomain {
+  width: 100%;
+  padding: 0.678571em 1em;
+  line-height: 1.21428571em;
+  font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+  font-size: 1.42857143em;
+  border-radius: 0.285714rem;
+  background-color: #2185d0;
+  color: #fff;
+  border: none;
+}

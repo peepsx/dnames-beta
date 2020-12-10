@@ -6,7 +6,7 @@ import ResultCard from '../blocks/ResultCard'
 import SuccessModal from '../blocks/SuccessModal'
 import RandomWordButton from '../blocks/RandomWordButton'
 // import bg from '../../images/logo.png'
-import peepsPNG from '../../images/peeps.png'
+import peepsPNG from '../../images/dnames.png'
 
 class Home extends Component {
 
@@ -123,7 +123,7 @@ class Home extends Component {
             <hr />
             {this.state.showLandingTitle ?
                     <div className="signup_text">
-                        <h3><Icon name='user' /> Create <u>Your</u> PeepsID</h3>
+                        <h3><Icon name='user' /> Search for a domain below</h3>
                     </div> : null }
 
                 <ResultCard
@@ -144,13 +144,14 @@ class Home extends Component {
                         </FadeIn>
                     : null }
 
+                    <div>
                     <Input
                         size='huge'
                         icon='search'
-                        placeholder='Enter a username...'
+                        placeholder='i.e. MyCompany'
                         onChange={this.onSearchChange}
                         maxLength={MasterConfig.requiredChars}
-                        style={{backgroundColor: 'transparent', marginBottom: '0.25em'}}
+                        style={{backgroundColor: 'transparent', marginBottom: '0.25em', marginRight: '20px'}}
                         value={this.state.searchTerm}
                         loading={this.state.searchLoading}
                         disabled={this.state.searchLoading}
@@ -161,10 +162,19 @@ class Home extends Component {
                         autoCapitalize="off"
                         spellCheck="false"
                     />
+                    
+                     <select class="drop-btn">
+                        <option>.dcom</option>
+                        <option>.dnet</option>
+                        <option>.dorg</option>
+                        <option>.dinfo</option>
+                        <option>.dweb</option>
+                     </select>
+                    </div>
 
                     <br />
                     <span>
-                        {this.state.searchTerm.length}/{MasterConfig.requiredChars} characters.
+                        {/* {this.state.searchTerm.length}/{MasterConfig.requiredChars} characters.
                         &nbsp; &nbsp;
                         <RandomWordButton
                             onGenRandomWord={this.onGenRandomWord}
@@ -172,8 +182,12 @@ class Home extends Component {
                             showFinish={this.shouldShowFinishButton()}
                             searchTermFinish={this.state.searchTermFinish}
                             reset={this.clearSearchTermFinish}
-                        />
+                        /> */}
+                        <button class="checkdomain">
+                        Check Availability
+                        </button>
                     </span>
+                    
                 </FadeIn>
 
                 <div className="spacer" />

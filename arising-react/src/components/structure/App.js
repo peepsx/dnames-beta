@@ -17,7 +17,7 @@ class App extends Component {
         style={{ height: '100%' }}
         verticalAlign='middle'
       >
-        <Grid.Column style={{maxWidth: 400}}>
+        <Grid.Column style={{maxWidth: 600}}>
           {/* <img src={logo} alt="Arising Logo" style={{maxWidth:"75%"}} /> */}
             <Segment raised={true} className="signup_model">
               <Home />
