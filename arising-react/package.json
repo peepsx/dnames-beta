@@ -1,0 +1,31 @@
+{
+  "name": "arising-react",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "./",
+  "devDependencies": {
+    "react-scripts": "1.1.4"
+  },
+  "dependencies": {
+    "@arisencore/ecc": "^1.0.1",
+    "arisenjs-ecc": "~1.0.0",
+    "ethers": "^4.0.27",
+    "font-awesome": "^4.7.0",
+    "react": "^16.4.1",
+    "react-coinbase-commerce": "^1.4.4",
+    "react-copy-to-clipboard": "^5.0.2",
+    "react-dom": "^16.4.1",
+    "react-fade-in": "^0.1.6",
+    "react-paypal-button-v2": "^2.6.2",
+    "react-toastify": "^6.2.0",
+    "semantic-ui-css": "^2.3.2",
+    "semantic-ui-react": "^0.81.3",
+    "sweetalert2": "^9.5.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

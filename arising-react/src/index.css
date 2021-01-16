@@ -1,0 +1,212 @@
+html, body {
+  height: 100%;
+  overflow-x:hidden;
+}
+
+html {
+  display: table;
+  margin: auto;
+}
+
+body {
+  display: table-cell;
+  vertical-align: middle;
+  padding-bottom:5em;
+  padding-top:1em;
+  color: #555;
+  /* background-color: #ffffff; */
+  background: url(images/arisen_signup_backimg.svg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;    
+}
+.signup_model{padding: 2em !important; border-radius: 1em !important; }
+.signup_logo{width: 85px; height: auto;}
+.signup_text{margin-top: 10%;}
+a { text-decoration: underline; }
+
+h1,h2,h3 { margin-bottom: 0.1em}
+h3 { color:#777 }
+
+.spacer { padding:.3em; }
+.with {width: 450px;}
+.footerLink { color:black; text-decoration:none; }
+.footerLink:hover { color:black; text-decoration: underline; }
+
+
+.fixedFooter {
+  position: fixed; 
+  text-align: center;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color:white;
+  padding:1em;
+  font-size:1.2em;
+  background-color:rgba(0,0,0,.30)
+}
+/* custom changes */
+.copy-mnemoic {
+  position: absolute;
+  right: 21px;
+}
+#swal2-content button {
+  border: 0;
+  border-radius: .25em;
+  background-color: #3085d6;
+  padding: 0.625em 1em;
+  margin-right: 1em;
+}
+#swal2-content button a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.0625em;
+}
+.random-mnemonic {
+  display: grid;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 20px;
+}
+.random-mnemonic span {
+  border-bottom: 1px solid #e0e0e0;
+  color: #999;
+  font-size: 14px;
+  padding: 10px 0;
+  text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .fixedFooter {
+      position: static;
+      display: inline-block;
+      width: 100%;
+      margin-top:2em;
+      margin-bottom:0;
+  }
+}
+
+.searchArea {
+  width: 600px;
+}
+.drop-btn {
+  padding: 0.678571em 1em;
+  line-height: 1.21428571em;
+  font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+  font-size: 1.42857143em;
+  border-radius: 0.285714rem;
+  background-color: #2185d0;
+  color: #fff;
+  border: none;
+}
+.checkdomain {
+  width: 100%;
+  padding: 0.678571em 1em;
+  line-height: 1.21428571em;
+  font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+  font-size: 1.42857143em;
+  border-radius: 0.285714rem;
+  background-color: #2185d0;
+  color: #fff;
+  border: none;
+}
+
+
+.cart-modal {
+  width: 600px !important;
+}
+
+table.price-total {
+  width: 50%;
+  font-size: 18px;
+  text-align: right;
+  margin-left: 50%;
+  margin-top: 12%;
+}
+
+table.price-total tr td {
+  text-align: right;
+}
+
+.box {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.domain-detail .box-head {
+  font-size: 1.5em;
+  color: #4CAF50;
+  border-bottom: 1px solid #ddd;
+}
+.box-body {
+  padding-bottom: 20%;
+  font-size: 1.5em;
+}
+.box-body.box-domain {
+  border-right: 1px solid #ddd;
+}
+.box.box-head.domain-title {
+  border-right: 1px solid #ddd;
+}
+
+.domain-pay form {
+  padding: 19% 0;
+  text-align: left;
+  margin-left: 20%;
+}
+.domain-pay form input {
+  margin: 24px 10px;
+  width: 1.5em;
+  height: 1.5em;
+}
+.domain-pay form label {
+  font-size: 1.5em;
+}
+.pay-button {
+  margin-top: 10 !important;
+}
+button.ui.mini.button {
+  margin-bottom: 10px;
+}
+.ui.mini.input {
+  font-size: .78571429em;
+  margin-bottom: 10px;
+}
+.payment-heading {
+  position: relative;
+}
+.payment-heading h2 {
+  position: absolute;
+  left: 25%;
+  top: 47px;
+}
+
+.cong-button-box {
+  text-align: center;
+margin-top: 20px;
+}
+.cong-button-box button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+button.download-btn a {
+  text-decoration: none;
+  color: #fff;
+}
+.cong-button-box .download-btn {
+  background-color: #21ba45;
+}
+.cong-button-box button.close-btn {
+  padding: 10px 47px;
+}
+
