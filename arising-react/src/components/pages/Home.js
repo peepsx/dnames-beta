@@ -99,11 +99,18 @@ class Home extends Component {
             // hide landing page title
             if (this.state.showLandingTitle) this.setState({ showLandingTitle: false })
 
-            let letters = /^[1-5a-z.]+$/;
+            //let letters = /^[1-5a-z.]+$/;
+
+            if(domain.length > 12){
+                this.setState({ inputError: true ,active: false})
+
+            }
+            else {
+
+                var re = new RegExp("^[1-5a-z.]+$");
 
 
-
-            if (domain.match(letters) || domain === '') {
+            if (re.test(domain) || domain === '') {
                 // save search term so far.
                 this.setState({ inputError: false })
                 this.setState({ active: true })
@@ -123,6 +130,9 @@ class Home extends Component {
                 // illegal char entered.
                 this.setState({ inputError: true ,active: false})
             }
+            }
+
+            
 
 
         }
@@ -227,7 +237,7 @@ class Home extends Component {
                     {this.state.inputError ?
                         <FadeIn>
                             <Label color='red'>
-                                Lowercase letters (a-z) and numbers (1-5) only.
+                                Lowercase letters (a-z) and numbers (1-5) only. Your domain name should not exceed 12 words
                             </Label>
                             <br />
                         </FadeIn>
