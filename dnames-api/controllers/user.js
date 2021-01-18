@@ -86,7 +86,7 @@ class Users {
                       newregistermodal.save().then((rap) => {
 
                         console.log("NEW ARISEN NAME REGISTERED")
-                        res.send({ status: true, data })
+                        res.send({ success: true, data })
 
                       }).catch((er) => {
                         //res.send({ status: false, message: "Something went wrong." })
@@ -212,6 +212,8 @@ class Users {
 
     let request = new checkoutNodeJssdk.orders.OrdersGetRequest(transactionId);
 
+    console.log('===========paypal ')
+
     payPalClient.client().execute(request).then((respo) => {
 
       if (respo.result.status == 'COMPLETED') {
@@ -239,11 +241,11 @@ class Users {
             })
           }
         }).catch((errorses) => {
-          return res.json({ status: false, message: "Error,Something went wrong" })
+          return res.json({ status: false, message: "Error,Something went wrong 2" })
         })
       }
     }).catch((e) => {
-      return res.json({ status: false, message: "Error,Something went wrong" })
+      return res.json({ status: false, message: "Error,Something went wrong 3" })
     })
 
   }

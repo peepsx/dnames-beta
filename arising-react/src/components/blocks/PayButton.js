@@ -373,6 +373,7 @@ class PayButton extends Component {
 
                                                         // shippingPreference="NO_SHIPPING" // default is "GET_FROM_FILE"
                                                         onSuccess={(details, data) => {
+                                                            console.log("on success paypal",details,data);
                                                             this.setState({ active: true })
                                                             if (details) {
                                                                 this.setState({ transectionID: details.id })
@@ -399,8 +400,12 @@ class PayButton extends Component {
 
                                                         }}
                                                         catchError={(err2) => {
+
+                                                            console.log("on err2 paypal",err2);
+
                                                         }}
                                                         options={{
+                                                            //clientId:"AeSkIlCgK1bjX6UPr8w9fDyMD7F5WsuzJWWbgiNSyEi2BnU43V6j5kJbRCK87gk6uYi8HfpyYyCKAzK_",
                                                             clientId: "Aes7-mZ9lsMi3h-m6lZ-eIQFBaUoF_hpHW1fF8bEZ5a59vZvzeTg75ZZc78g5h5igwkSABHfvlDQk8VQ",
                                                             disableFunding:"card"
 
