@@ -116,9 +116,12 @@ class Users {
 
         } else if (paymentMode == "Crypto") {
 
-          if (!buttonID)
-            return res.status(401).send({ success: false, message: "Fields are missing" })
+          console.log("crypto1",buttonID);
 
+          if (!buttonID)
+          return res.status(401).send({ success: false, message: "Fields are missing" })
+          
+          console.log("crypto2");
           CryptPaymentmodal.findOne({ code: transaction_ID })
             .then((respo) => {
               console.log('=====respo', respo, domainName);

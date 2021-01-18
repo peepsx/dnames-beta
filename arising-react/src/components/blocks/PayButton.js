@@ -52,7 +52,8 @@ class PayButton extends Component {
         active: false,
         transectionID: "",
         dltd: "",
-        smallmodal: false
+        smallmodal: false,
+        buttonId:""
 
     }
 
@@ -183,11 +184,12 @@ class PayButton extends Component {
                 active: this.state.activePublic,
                 dltd: this.state.dltd,
                 transaction_ID: this.state.transectionID,
-                paymentMode: this.state.paymentType
+                paymentMode: this.state.paymentType,
+                buttonID: this.state.buttonId
             })
         }).then(response => response.json())
             .then((data) => {
-                if (data.status === true) {
+                if (data.success === true) {
                     this.setState({ smallmodal: true })
                 }
             })
@@ -422,11 +424,16 @@ class PayButton extends Component {
                                                         checkoutId={checkoutid}
                                                         disableCaching={true}
                                                         onChargeSuccess={(chargesuccess) => {
+                                                           // console.log("chargesuccess",chargesuccess)
                                                         }}
-                                                        onChargeFailure={(chargefailure) => {                                                            
+                                                        onChargeFailure={(chargefailure) => {  
+                                                          //  console.log("chargefailure",chargefailure)
+                                                          
                                                         }}
                                                         onPaymentDetected={(paymentdetected) => {
-                                                            this.setState({ transectionID: paymentdetected.code })
+                                                           // console.log("paymentdetected",paymentdetected)
+
+                                                            this.setState({ transectionID: paymentdetected.code ,buttonId:paymentdetected.buttonId })
                                                             if (paymentdetected.event) {
                                                                 fetch(ApiKey.cryptoPaymentApi, {
                                                                     method: "POST",
@@ -451,6 +458,8 @@ class PayButton extends Component {
                                                             }
                                                         }}
                                                         onModalClosed={(modalclosed) => {
+
+                                                            console.log("modalclosed")
 
                                                         }}
                                                     />
