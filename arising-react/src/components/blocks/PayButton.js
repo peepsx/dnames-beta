@@ -373,7 +373,6 @@ class PayButton extends Component {
 
                                                         // shippingPreference="NO_SHIPPING" // default is "GET_FROM_FILE"
                                                         onSuccess={(details, data) => {
-                                                            console.log("on success paypal",details,data);
                                                             this.setState({ active: true })
                                                             if (details) {
                                                                 this.setState({ transectionID: details.id })
