@@ -1,3 +1,4 @@
 /.env
 *keys.js
 *paypalclient.js
+/node_modules

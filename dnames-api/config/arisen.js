@@ -73,6 +73,17 @@ class KeyName {
                  debug: true, // API activity
                  sign: true,
                  creatorAccountName: process.env.CREATER_DWEB})
+            }else if (domainName === "D") {
+                resolve({
+                 chainId: '136ce1b8190928711b8bb50fcae6c22fb620fd2c340d760873cf8f7ec3aba2b3', // 32 byte (64 char) hex string
+                 keyProvider: process.env.D_PK, // WIF string or array of keys..
+                 httpEndpoint: 'https://greatchains.arisennodes.io',
+                 expireInSeconds: 60,
+                 broadcast: true,
+                 authorization: process.env.CREATER_D + '@active',
+                 debug: true, // API activity
+                 sign: true,
+                 creatorAccountName: process.env.CREATER_D})
             }else{
                 reject(false);
             }

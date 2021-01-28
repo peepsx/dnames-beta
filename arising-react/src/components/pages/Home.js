@@ -56,6 +56,7 @@ class Home extends Component {
         var dorgPrice = 2.50
         var dinfoPrice = 1.00
         var dweb = 25.00
+        var dPrice = 4.00
         if (this.state.dropDown == ".dcom") {
             localStorage.setItem("selecteddltdprice", dcomPrice)
             localStorage.setItem("selecteddltdname", this.state.dropDown)
@@ -89,11 +90,17 @@ class Home extends Component {
             localStorage.setItem("dltdname", "DWEB")
             this.setState({ extraPrice: dweb })
 
+        } else if (this.state.dropDown == ".d") {
+            localStorage.setItem("selecteddltdprice", dPrice)
+            localStorage.setItem("selecteddltdname", this.state.dropDown)
+            localStorage.setItem("dltdname", "D")
+            this.setState({ extraPrice: dPrice })
+
         }
         if (this.state.searchTerm == "" || this.state.searchTerm == null) {
             Swal.fire({ icon: 'error', title: 'Oops...', text: 'Enter your domain name.' })
         } else {
-          
+
 
             const domain = this.state.searchTerm.concat(this.state.dropDown)
             // hide landing page title
@@ -101,8 +108,8 @@ class Home extends Component {
 
             //let letters = /^[1-5a-z.]+$/;
 
-            if(domain.length > 12){
-                this.setState({ inputError: true ,active: false})
+            if (domain.length > 12) {
+                this.setState({ inputError: true, active: false })
 
             }
             else {
@@ -110,29 +117,29 @@ class Home extends Component {
                 var re = new RegExp("^[1-5a-z.]+$");
 
 
-            if (re.test(domain) || domain === '') {
-                // save search term so far.
-                this.setState({ inputError: false })
-                this.setState({ active: true })
-                // set url hash.
-                window.location.hash = `#${domain}`
-                // run search
-                fetch(`${MasterConfig.httpEndpoint}/lookup/${domain}`)
-                    .then((response) => {
-                        this.setState({ active: false })
-                        return response.json()
-                    })
-                    .then((searchResponse) => {
-                        this.setState({ searchResponse, searchLoading: false })
-                    });
+                if (re.test(domain) || domain === '') {
+                    // save search term so far.
+                    this.setState({ inputError: false })
+                    this.setState({ active: true })
+                    // set url hash.
+                    window.location.hash = `#${domain}`
+                    // run search
+                    fetch(`${MasterConfig.httpEndpoint}/lookup/${domain}`)
+                        .then((response) => {
+                            this.setState({ active: false })
+                            return response.json()
+                        })
+                        .then((searchResponse) => {
+                            this.setState({ searchResponse, searchLoading: false })
+                        });
 
-            } else {
-                // illegal char entered.
-                this.setState({ inputError: true ,active: false})
-            }
+                } else {
+                    // illegal char entered.
+                    this.setState({ inputError: true, active: false })
+                }
             }
 
-            
+
 
 
         }
@@ -268,6 +275,7 @@ class Home extends Component {
                             <option value=".dorg">.dorg</option>
                             <option value=".dinfo">.dinfo</option>
                             <option value=".dweb">.dweb</option>
+                            <option value=".d">.d</option>
                         </select>
                     </div>
 

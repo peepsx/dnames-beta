@@ -306,6 +306,8 @@ class PayButton extends Component {
             checkoutid = "3b0e54c1-ecb1-4050-87ab-9a2a2394d341"
         } else if (this.state.dltd === "DWEB") {
             checkoutid = "ac224720-2abb-4974-b1c1-cf40bd5290ec"
+        }else if (this.state.dltd === "D") {
+            checkoutid = "5f1174d9-40b6-471c-af5d-6c9f7c2028b8"
         }
 
         // to submit, the `ownerPublic` key MUST be present AND valid.
@@ -404,7 +406,7 @@ class PayButton extends Component {
 
                                                         }}
                                                         options={{
-                                                            //clientId:"AeSkIlCgK1bjX6UPr8w9fDyMD7F5WsuzJWWbgiNSyEi2BnU43V6j5kJbRCK87gk6uYi8HfpyYyCKAzK_",
+                                                            // clientId:"AeSkIlCgK1bjX6UPr8w9fDyMD7F5WsuzJWWbgiNSyEi2BnU43V6j5kJbRCK87gk6uYi8HfpyYyCKAzK_",
                                                             clientId: "Aes7-mZ9lsMi3h-m6lZ-eIQFBaUoF_hpHW1fF8bEZ5a59vZvzeTg75ZZc78g5h5igwkSABHfvlDQk8VQ",
                                                             disableFunding:"card"
 
